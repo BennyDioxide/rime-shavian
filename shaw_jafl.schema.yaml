@@ -1,0 +1,39 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: shaw_jafl
+  name: Shaw JAFL
+  version: 1.0
+  author:
+    - "Layout: Shavian.info"
+    - "RIME Port: BennyDioxide"
+  description: |
+    A native Shavian alphabet keyboard developed to minimise typing effort.
+    https://www.shavian.info/shaw_jafl_keyboard_layout/
+
+engine:
+  processors:
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ:;
+  initials: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ:;
+  auto_select: true
+
+translator:
+  dictionary: shaw_jafl
+  enable_sentence: false
+  enable_user_dict: false
+
+key_binder:
+  import_preset: default
